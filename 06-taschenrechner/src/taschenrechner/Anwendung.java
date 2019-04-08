@@ -10,8 +10,15 @@ public class Anwendung
     Integer c = Taschenrechner.plus(a, b);
     System.out.println("" + a + " + " + b + " = " + c);
 
-    Integer d = Taschenrechner.minus(a, b);
-    System.out.println("" + a + " - " + b + " = " + d);
+    c = Taschenrechner.minus(a, b);
+    System.out.println("" + a + " - " + b + " = " + c);
 
+    c = Taschenrechner.mal(a, b);
+    System.out.println("" + a + " * " + b + " = " + c);
+
+    Double x = Taschenrechner.durch(a, b);
+    System.out.println("" + a + " / " + b + " = " + x);
+
+    System.out.println("π = " + Taschenrechner.pi());
   }
 }
