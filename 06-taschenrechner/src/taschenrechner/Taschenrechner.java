@@ -1,5 +1,8 @@
 package taschenrechner;
 
+import java.util.Set;
+import java.util.TreeSet;
+
 public class Taschenrechner
 {
 
@@ -22,5 +25,33 @@ public class Taschenrechner
 
   public static double pi() {
     return Math.PI;
+  }
+
+  public static Set<Double> msf(int a, int b, int c) {
+    Set<Double> schnittpunkte = new TreeSet<>();
+    int x = b * b - 4 * a * c;
+    if (x > 0) {
+      double y = Math.sqrt(x);
+      double z = (-b + y) / 2 * a;
+      schnittpunkte.add(z);
+
+      z = (-b - y) / 2 * a;
+      schnittpunkte.add(z);
+    }
+    if (x == 0) {
+      double y = Math.sqrt(x);
+      double z = (-b + y) / 2 * a;
+      schnittpunkte.add(z);
+
+      z = (-b - y) / 2 * a;
+    }
+
+    return schnittpunkte;
+  }
+
+  public static double satzdespythagoras(int a, int b) {
+    double c = Math.sqrt(a * a + b * b);
+    return c;
+
   }
 }
